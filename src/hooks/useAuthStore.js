@@ -48,10 +48,10 @@ export const useAuthStore = () => {
       //   errorsToPrint += value.msg;
       // });
 
-      // dispatch(onLogout(errorsToPrint));
-      // setTimeout(() => {
-      //   dispatch(clearErrorMessage());
-      // }, 10);
+      dispatch(onLogout(error.response.data.msg));
+      setTimeout(() => {
+        dispatch(clearErrorMessage());
+      }, 10);
     }
   };
 
